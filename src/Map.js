@@ -17,7 +17,6 @@ import mapData from "./data/counties.json";
 import worldData from "./data/worldOutline.json";
 import stateMappings from "./data/stateMappings.json";
 import yearSectorMapping from "./data/yearSectorMapping.json";
-import Legend from "./Legend";
 
 const stateMap = JSON.parse(JSON.stringify(stateMappings));
 const yearSectorMap = JSON.parse(JSON.stringify(yearSectorMapping));
@@ -34,7 +33,7 @@ const onHoverStyle = {
   fillOpacity: 0.5,
 };
 
-const onEachCountyLayers = (year, sector) => {
+const onEachCountyLayers = (year, sector, grades) => {
   countyLayers.forEach((countyLayer) => {
     if (year !== null && sector !== null) {
       const layer = countyLayer[0];
@@ -54,7 +53,7 @@ const onEachCountyLayers = (year, sector) => {
       }
 
       layer.setStyle({
-        fillColor: getColor(parseInt(val)),
+        fillColor: getColor(parseInt(val), grades),
       });
 
       layer.bindPopup(
@@ -78,27 +77,27 @@ const onEachCountyLayers = (year, sector) => {
   });
 };
 
-function getColor(d) {
-  return d > 1000
+function getColor(d, grades) {
+  return d > grades[7]
     ? "#800026"
-    : d > 500
+    : d > grades[6]
     ? "#BD0026"
-    : d > 200
+    : d > grades[5]
     ? "#E31A1C"
-    : d > 100
+    : d > grades[4]
     ? "#FC4E2A"
-    : d > 50
+    : d > grades[3]
     ? "#FD8D3C"
-    : d > 20
+    : d > grades[2]
     ? "#FEB24C"
-    : d > 10
+    : d > grades[1]
     ? "#FED976"
     : "#FFEDA0";
 }
 
-const Map = ({ setMap, year, sector, setTopSectorKey, setHoveredCounty }) => {
+const Map = ({ setMap, year, sector, setTopSectorKey, setHoveredCounty, grades }) => {
   useMemo(() => {
-    onEachCountyLayers(year, sector);
+    onEachCountyLayers(year, sector, grades);
   }, [year, sector]);
 
   const map = useMemo(() => {
@@ -134,14 +133,14 @@ const Map = ({ setMap, year, sector, setTopSectorKey, setHoveredCounty }) => {
 
     const countyStyle = {
       fillColor: "blue",
-      fillOapcity: 0.5, // 0-1
+      fillOapcity: 0.5,
       color: "black",
       weight: 0.5,
     };
 
     const worldStyle = {
       fillColor: "grey",
-      fillOapcity: 0.3, // 0-1
+      fillOapcity: 0.3,
       color: "black",
       weight: 0,
     };

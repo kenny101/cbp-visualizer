@@ -27,7 +27,6 @@ const SidebarComponent = ({
   const onOpen = (id) => {
     setOpenTab(id);
   };
-  // console.log("rerendered");
 
   return (
     <section className="Sidebar">
@@ -45,7 +44,6 @@ const SidebarComponent = ({
         <Tab id="search" header="Search" icon={<FiSearch />}>
           {useMemo(
             () => (
-              console.log("year rerendered"),
               <YearSlider setYear={setYear} setCurrYear={setCurrYear} />
             ),
             [setYear, setCurrYear]
@@ -53,7 +51,6 @@ const SidebarComponent = ({
           <div className="search-label">Employment Sector:</div>
           {useMemo(
             () => (
-              console.log("sector rerendered"),
               <SectorSelect currYear={currYear} setSector={setSector} />
             ),
             [currYear]
@@ -62,7 +59,6 @@ const SidebarComponent = ({
 
           {useMemo(
             () => (
-              console.log("top sectors rerendered"),
               <TopSectors
                 year={year}
                 topSectorKey={topSectorKey}

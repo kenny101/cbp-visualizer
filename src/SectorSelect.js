@@ -42,7 +42,6 @@ const SectorSelect = ({ currYear, setSector}) => {
 
   return (
     <div className="search-label">
-      Employment Sector:
       <SectorDropdown />
     </div>
   );
