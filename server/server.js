@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
@@ -10,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 const routes = require("./routes/api");
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://admin:Cbpdata5313!@G69B9ED90CED702-CBPDATABASE.adb.us-sanjose-1.oraclecloudapps.com:27017/cbpdata?authMechanism=PLAIN&authSource=$external&ssl=true&retryWrites=false&loadBalanced=true",
+  process.env.MONGODB_URL,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
