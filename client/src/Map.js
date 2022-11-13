@@ -32,7 +32,7 @@ const onEachCountyLayers = (year, sector, grades) => {
     const options = {
       method: "GET",
       // url: process.env.REACT_APP_API_BASE_URL || "http://localhost:8080/api/employment-data",
-      url: "http://localhost:8080/api/employment-data",
+      url: "/api/employment-data",
       params: { Year: year, Sector: sector },
     };
     const countyStateMap = new Map();
