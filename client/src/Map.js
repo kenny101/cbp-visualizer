@@ -31,6 +31,7 @@ const onEachCountyLayers = (year, sector, grades) => {
   if (!employmentDataMap.has(year + " " + sector)) {
     const options = {
       method: "GET",
+      // url: process.env.REACT_APP_API_BASE_URL || "http://localhost:8080/api/employment-data",
       url: "http://localhost:8080/api/employment-data",
       params: { Year: year, Sector: sector },
     };

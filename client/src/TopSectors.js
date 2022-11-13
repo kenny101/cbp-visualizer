@@ -23,6 +23,7 @@ const getTopSectors = (year) => {
   }
   const options = {
     method: "GET",
+    // url: process.env.REACT_APP_API_BASE_URL || "http://localhost:8080/api/top-sectors",
     url: "http://localhost:8080/api/top-sectors",
     params: { Year: year },
   };
