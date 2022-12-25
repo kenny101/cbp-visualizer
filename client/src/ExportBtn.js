@@ -1,0 +1,197 @@
+import React from "react";
+
+const yearToDownload = new Map([
+  [
+    1975,
+    "https://drive.google.com/uc?id=1VWWnfqmgOKUUOuFMhXkkFBaTF5PabPyQ&export=download",
+  ],
+  [
+    1976,
+    "https://drive.google.com/uc?id=1YhwCvEDQVrakukBT0SI9EnZWk3oSMHoZ&export=download",
+  ],
+  [
+    1977,
+    "https://drive.google.com/uc?id=14_IkETxqNJsXlXIMuM6_P_M3YLac8kLM&export=download",
+  ],
+  [
+    1978,
+    "https://drive.google.com/uc?id=1gAqtkv2MksUlnhPFu6dyj81If7usjla6&export=download",
+  ],
+  [
+    1979,
+    "https://drive.google.com/uc?id=1u3pxOvpU4RJtER5cMOujqvERI44FYSi1&export=download",
+  ],
+  [
+    1980,
+    "https://drive.google.com/uc?id=1m7PbScy_LH52vXOLrkFlgh7_yS-dNjQ2&export=download",
+  ],
+  [
+    1981,
+    "https://drive.google.com/uc?id=1au1umKdn_DZcvQqDBCfTWAR9EmowUoLY&export=download",
+  ],
+  [
+    1982,
+    "https://drive.google.com/uc?id=1FmLyHeCAhkICUSpgHgCp4cP5-W-z1DBF&export=download",
+  ],
+  [
+    1983,
+    "https://drive.google.com/uc?id=18gnYJES8PZULeVMk4D2J21yI-kI-8Et3&export=download",
+  ],
+  [
+    1984,
+    "https://drive.google.com/uc?id=16WordUZ0xTVf1_veRadbg5s9OxPiPPqw&export=download",
+  ],
+  [
+    1985,
+    "https://drive.google.com/uc?id=1kbYwBZubIz_vpcvb-V3Cx21pZXO_4CkG&export=download",
+  ],
+  [
+    1986,
+    "https://drive.google.com/uc?id=1yrFsBQ5b1ODGDJt6a79dwkm3K6P25wSq&export=download",
+  ],
+  [
+    1987,
+    "https://drive.google.com/uc?id=1pZMIyloDIcfN8OdPx2XDXZ53NfA2RIAS&export=download",
+  ],
+  [
+    1988,
+    "https://drive.google.com/uc?id=1qo-E-FbQeUmHs02wb0hHHNgEj5Ixek99&export=download",
+  ],
+  [
+    1989,
+    "https://drive.google.com/uc?id=1MHUo8DV0s-f0ymITK6rCc95V2iEKVrtI&export=download",
+  ],
+  [
+    1990,
+    "https://drive.google.com/uc?id=1HCj9x0lZZj3x4uC4J5tz_mlH5lE4bjWb&export=download",
+  ],
+  [
+    1991,
+    "https://drive.google.com/uc?id=1bWWVL7qdxK-i-QoiD76zZLWY50jMzzVx&export=download",
+  ],
+  [
+    1992,
+    "https://drive.google.com/uc?id=1ECiYwUpcon_bQTuZ-0XrVvIuxEhB9zCq&export=download",
+  ],
+  [
+    1993,
+    "https://drive.google.com/uc?id=122qPP7zi8z0iFgO002Wb3Ixd0qVCiMap&export=download",
+  ],
+  [
+    1994,
+    "https://drive.google.com/uc?id=1XKRzGmg_CkE8Iu3pSFR1FNlxsT9Yej44&export=download",
+  ],
+  [
+    1995,
+    "https://drive.google.com/uc?id=18yQ9ljmLh6EoXJQiB3Yp4j0WaLmiRIgl&export=download",
+  ],
+  [
+    1996,
+    "https://drive.google.com/uc?id=1CQDhQ1fZbq6TKCtfxjMeCT-No-HC9Rk-&export=download",
+  ],
+  [
+    1997,
+    "https://drive.google.com/uc?id=1DYjabbVuQizRft7ykd9g809YqonrFQcE&export=download",
+  ],
+  [
+    1998,
+    "https://drive.google.com/uc?id=1-5-td0lOJZrL92qFzcpJcQfrkWMOScnp&export=download",
+  ],
+  [
+    1999,
+    "https://drive.google.com/uc?id=1zs8JdkaZfwfojVYb7i8lLLC9O4hBDwEo&export=download",
+  ],
+  [
+    2000,
+    "https://drive.google.com/uc?id=1VryvtdEgs2b4oy9zaE2lxOIwMbL56_n5&export=download",
+  ],
+  [
+    2001,
+    "https://drive.google.com/uc?id=10d_hYkr26S01WPkpok3ur0MPBiBkD4ap&export=download",
+  ],
+  [
+    2002,
+    "https://drive.google.com/uc?id=1kguE3r7i672IhzarL0eYuAdCzY9W-G8W&export=download",
+  ],
+  [
+    2003,
+    "https://drive.google.com/uc?id=1fhyoqfAY4B6wkB20V6fjWFFv4rldiwIt&export=download",
+  ],
+  [
+    2004,
+    "https://drive.google.com/uc?id=1pGAp-RGmu3SxZFKpYIV2lOvJprOzv2qy&export=download",
+  ],
+  [
+    2005,
+    "https://drive.google.com/uc?id=1_Oy7sEpWVnvfC410CH99KTIoAmBD0GVY&export=download",
+  ],
+  [
+    2006,
+    "https://drive.google.com/uc?id=16rX1y-FObrGQbrlk7_L3igjXZa1udSua&export=download",
+  ],
+  [
+    2007,
+    "https://drive.google.com/uc?id=10cq7UnpQQSgQs8_kYKM0KJV0hKjLa-Yj&export=download",
+  ],
+  [
+    2008,
+    "https://drive.google.com/uc?id=1KfBiQ2tXD6i9e1oTSyqHdspOHek2xhPU&export=download",
+  ],
+  [
+    2009,
+    "https://drive.google.com/uc?id=1BpDiATgVrrUHznBwI4RYrzaVe9muCt8s&export=download",
+  ],
+  [
+    2010,
+    "https://drive.google.com/uc?id=1eIsFpeBzQtBosgws1aDm0BjpqOGthy3E&export=download",
+  ],
+  [
+    2011,
+    "https://drive.google.com/uc?id=1KbRok6IaP6lYF5EoLuHM6U5tRpaJcx69&export=download",
+  ],
+  [
+    2012,
+    "https://drive.google.com/uc?id=1nKPIumZQKTJrmH3vsMLGOLPPJnFTnQMq&export=download",
+  ],
+  [
+    2013,
+    "https://drive.google.com/uc?id=1WkwTYXVyGJxhyKMXtJPwb2phg4oma78v&export=download",
+  ],
+  [
+    2014,
+    "https://drive.google.com/uc?id=1Qn53oWpxUAKK2ArYqwtW6H9FgYAzBgRA&export=download",
+  ],
+  [
+    2015,
+    "https://drive.google.com/uc?id=1Sx8XQPZ6UResIWUUsDIkt6k4KkR535ms&export=download",
+  ],
+  [
+    2016,
+    "https://drive.google.com/uc?id=1QKnWkn5xLfpUVDWEeEVvOv9AKG-kmjnl&export=download",
+  ],
+]);
+
+var downloadURL = null;
+
+const ExportBtn = (year) => {
+  function exportData() {
+    downloadURL = yearToDownload.get(year.year);
+  }
+
+  return (
+    <div>
+      <a onClick={exportData} href={yearToDownload.get(year.year)}>
+        <button
+          style={{
+            backgroundColor: "#fff",
+            position: "fixed",
+          }}
+        >
+          Export Data
+        </button>
+      </a>
+    </div>
+  );
+};
+
+export default ExportBtn;

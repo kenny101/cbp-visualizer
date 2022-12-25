@@ -46,3 +46,7 @@
 .sidebar-content{
   overflow: hidden;
 }
+
+.search-label {
+  font-weight: bold
+}

@@ -1,9 +1,5 @@
 require('dotenv').config();
 
-// var corsOptions = {
-//   origin: process.env.CLIENT_ORIGIN || "http://localhost:8081"
-// };
-
 
 const express = require("express");
 const app = express();
@@ -26,7 +22,7 @@ const {
 } = process.env;
 
 mongoose.connect(
-  "REDACTED FOR SECURITY",
+  "REDACTED KEY",
   {
     dbName: "cbpdata",
     useNewUrlParser: true,

@@ -4,6 +4,9 @@ import axios from "axios";
 var topSectorRender = [];
 var topSectorsMap = new Map();
 
+import { BsInfoCircle } from "react-icons/bs";
+import Tooltip from "./Tooltip";
+
 function renderTopSectors(year, topSectorKey) {
   if (year === null || topSectorKey === null) {
     return [];
@@ -23,7 +26,8 @@ const getTopSectors = (year) => {
   }
   const options = {
     method: "GET",
-    url: "/api/top-sectors",
+    url: "http://localhost:8080/api/top-sectors",
+    // url: "/api/top-sectors",
     params: { Year: year },
   };
 
@@ -52,7 +56,19 @@ const TopSectors = ({ hoveredCounty, year, topSectorKey }) => {
   return (
     <div className="top-sectors">
       <br></br>
-      Top 10 Sectors for {hoveredCounty} in {year}:
+      <b>
+        Top 10 Sectors for {hoveredCounty} in {year}:{" "}
+        <Tooltip
+          content="Select a year and hover counties to display"
+          direction="bottom"
+        >
+          <BsInfoCircle
+            style={{
+              marginLeft: "5px",
+            }}
+          />
+        </Tooltip>
+      </b>
       <ol>
         {topSectorRender.map((sector) => {
           return <li key={sector}>{sector}</li>;

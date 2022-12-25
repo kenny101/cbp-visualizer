@@ -22,9 +22,9 @@
     "react-slider": "^2.0.3"
   },
   "devDependencies": {
+    "nodemon": "^2.0.20",
     "sass": "^1.54.9",
-    "typescript": "3.8.3",
-    "nodemon": "^2.0.20"
+    "typescript": "3.8.3"
   },
   "scripts": {
     "start": "react-scripts start",

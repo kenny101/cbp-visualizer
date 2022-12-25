@@ -31,8 +31,7 @@ const onEachCountyLayers = (year, sector, grades) => {
   if (!employmentDataMap.has(year + " " + sector)) {
     const options = {
       method: "GET",
-      // url: process.env.REACT_APP_API_BASE_URL || "http://localhost:8080/api/employment-data",
-      url: "/api/employment-data",
+      url: "http://localhost:8080/api/employment-data",
       params: { Year: year, Sector: sector },
     };
     const countyStateMap = new Map();
@@ -167,10 +166,11 @@ const renderedMap = ({
   setTopSectorKey,
   setHoveredCounty,
   grades,
+  csvRows,
 }) => {
   useEffect(() => {
     if (year !== null && sector !== null) {
-      onEachCountyLayers(year, sector, grades);
+      onEachCountyLayers(year, sector, grades, csvRows);
     }
   }, [year, sector]);
 

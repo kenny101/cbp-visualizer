@@ -67,7 +67,8 @@ function Legend({ map, year, sector, grades, setGrades }) {
     } else {
       const options = {
         method: "GET",
-        url: "/api/quantiles",
+        // url: "/api/quantiles",
+        url: "http://localhost:8080/api/quantiles",
         params: { Year: year, Sector: sector },
       };
 
