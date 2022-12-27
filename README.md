@@ -1,4 +1,4 @@
-## View the website [here](http://34.28.207.226/)
+## [View the website here](http://34.28.207.226/)
 
 
 ## Background
