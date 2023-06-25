@@ -1,4 +1,5 @@
 ## [View the website here](http://34.28.207.226/)
+![image](https://github.com/kenny101/cbp-visualizer/assets/53395124/182fba4a-0ddf-407d-8b45-15ac291ba179)
 
 
 ## Background
