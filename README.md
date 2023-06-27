@@ -1,7 +1,7 @@
 ## [View the website here](http://34.28.207.226/)
 ![image](https://github.com/kenny101/cbp-visualizer/assets/53395124/db22c0ad-8d54-41bd-9bd5-1e740ac37826)
 
-<b> CBP data is still ongoing development. (Code refactoring and deployment) </b> 
+<b> CBP data is still ongoing development. Currently transitioning to Nextjs and tRPC/Prisma backend </b> 
 ## Background
 This project contains code for the website accompanying the paper ["Imputing Missing Values in the US Census Bureau's County Business Patterns"](http://fpeckert.me/cbp/efsy.pdf) 
 written by Eckert et. al.
