@@ -1,5 +1,5 @@
 ## [View the website here](http://34.28.207.226/)
-<b> CBP data is still ongoing development. </b> 
+<b> CBP data is still ongoing development. To display map data, select a year and then a sector. Hover over counties to display data</b> 
 
 ![image](https://github.com/kenny101/cbp-visualizer/assets/53395124/db22c0ad-8d54-41bd-9bd5-1e740ac37826)
 ## Background
