@@ -1,7 +1,7 @@
 ## [View the website here](http://34.28.207.226/)
 <b> CBP data is still ongoing development. To display map data, select a year and then a sector. Hover over counties to display data</b> 
+![Screenshot of Industry Atlas Website](https://github.com/kenny101/cbp-visualizer/assets/53395124/ec2e1630-37a2-455e-8829-4950c529f9ec)
 
-![image](https://github.com/kenny101/cbp-visualizer/assets/53395124/db22c0ad-8d54-41bd-9bd5-1e740ac37826)
 ## Background
 This project contains code for the website accompanying the paper ["Imputing Missing Values in the US Census Bureau's County Business Patterns"](http://fpeckert.me/cbp/efsy.pdf) 
 written by Eckert et. al.
